@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 public class signUp extends AppCompatActivity {
 
     private EditText usernameBox, passwordBox, emailBox;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class signUp extends AppCompatActivity {
             }});
 
         if (ParseUser.getCurrentUser() != null) {
-            Intent i = new Intent(this, userListActivity.class);
+            Intent i = new Intent(this, viewTweets.class);
               startActivity(i);
         }
     }
@@ -86,7 +88,7 @@ public class signUp extends AppCompatActivity {
 
     public void gotoWelcome()
     {
-        Intent i = new Intent(this, userListActivity.class);
+        Intent i = new Intent(this, viewTweets.class);
         finish();
         startActivity(i);
     }

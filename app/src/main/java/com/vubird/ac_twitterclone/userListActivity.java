@@ -62,11 +62,11 @@ public class userListActivity extends AppCompatActivity implements AdapterView.O
                     listView.setAdapter(arrayAdapter);
                     for(String twitterUser : userArrayList)
                     {
-              //          if(ParseUser.getCurrentUser().getList("Following")!=null) {
+                        if(ParseUser.getCurrentUser().getList("Following")!=null) {
                             if (ParseUser.getCurrentUser().getList("Following").contains(twitterUser)) {
                                 listView.setItemChecked(userArrayList.indexOf(twitterUser), true);
                             }
-                //        }
+                        }
                     }
                 }
 
